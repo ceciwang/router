@@ -34,7 +34,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 830px;
   }
 }
 .container-narrow > hr {
@@ -76,4 +76,32 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.sound {
+    background-image: url("../images/routeIcons.png");
+    background-position: -335px -50px;
+    width: 200px;
+    height: 150px;
+}
+
+.temp {
+    background-image: url("../images/routeIcons.png");
+    background-position: -500px -50px;
+    width: 200px;
+    height: 150px;
+}
+
+.light {
+    background-image: url("../images/routeIcons.png");
+    background-position: 0px -285px;
+    width: 200px;
+    height: 150px;
+}
+
+.other {
+    background-image: url("../images/routeIcons.png");
+    background-position: 0px -50px;
+    width: 200px;
+    height: 150px;
 }

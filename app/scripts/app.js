@@ -9,7 +9,7 @@ angular.module('routeApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'HomeController'
       })
       .otherwise({
         redirectTo: '/'
