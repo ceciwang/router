@@ -23,26 +23,22 @@
 </div>
 
 <div class="row">
-    <div class="col-md-3 text-center">
+    <div class="col-md-4 text-center">
         <div class="sound"></div>
     </div>
-    <div class="col-md-3 text-center">
-        <div class="temp"></div>
-    </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-4 text-center">
         <div class="light" ng-class="{lightOn: lightOn}"></div>
         <div class="text-center" ng-switch on="lightOn" ng-click="switchLight()">
             <img ng-switch-when="true" src="images/off.jpg" alt=""/>
             <img ng-switch-default="" src="images/on.jpg" alt=""/>
         </div>
-
-        </div>
-
     </div>
-    <!--<div class="col-md-3">-->
-        <!--<div class="other"></div>-->
-    <!--</div>-->
+
+    <div class="col-md-4 text-center">
+        <div class="temp"></div>
+    </div>
 </div>
+
 
 <div class="footer">
     <p>♥ from the Franken Zeng.</p>
