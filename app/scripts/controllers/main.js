@@ -11,9 +11,11 @@ angular.module('routeApp').controller('HomeController', function ($scope, $http)
             ],
             uuid: "1234"
         };
-        $http.post("http://192.168.99.1:8090/smart", request, function(data){
-            $scope.lightOn = !$scope.lightOn;
-        });
+        $scope.lightOn = !$scope.lightOn;
+
+//        $http.post("http://192.168.99.1:8090/smart", request, function(data){
+//            $scope.lightOn = !$scope.lightOn;
+//        });
     };
 
 });

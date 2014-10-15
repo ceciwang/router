@@ -79,24 +79,33 @@ body {
 }
 
 .sound {
-    background-image: url("../images/routeIcons.png");
-    background-position: -335px -50px;
+    background-image: url("../images/sound.png");
+    /*background-position: -335px -50px;*/
+    background-repeat: no-repeat;
     width: 200px;
     height: 150px;
 }
 
 .temp {
-    background-image: url("../images/routeIcons.png");
-    background-position: -500px -50px;
+    background-image: url("../images/temperature.png");
+    /*background-position: -500px -50px;*/
+    background-repeat: no-repeat;
+
     width: 200px;
     height: 150px;
 }
 
 .light {
-    background-image: url("../images/routeIcons.png");
-    background-position: 0px -285px;
+    background-image: url("../images/light.png");
+    /*background-position: 0px -285px;*/
+    background-repeat: no-repeat;
+
     width: 200px;
     height: 150px;
+}
+
+.light.lightOn {
+    background-image: url("../images/lightoff.png");
 }
 
 .other {
