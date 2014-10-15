@@ -11,6 +11,10 @@ angular.module('routeApp', [
         templateUrl: 'views/main.html',
         controller: 'HomeController'
       })
+        .when('/fancyLight', {
+            templateUrl: 'views/light.html',
+            controller: 'LightController'
+        })
       .otherwise({
         redirectTo: '/'
       });
