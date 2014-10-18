@@ -3,7 +3,8 @@
 angular.module('routeApp', [
   'ngCookies',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ui.slider'
 ]).config(function ($routeProvider) {
     $routeProvider
       .when('/', {

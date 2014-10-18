@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/light.css">
+        <link rel="stylesheet" href="styles/jquery-ui.css">
         <!-- endbuild -->
 </head>
   <body ng-app="routeApp">
@@ -30,8 +31,9 @@
     <div class="container" ng-view=""></div>
 
 
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="libs/jquery-ui.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="libs/underscore.js"></script>
 
         <!-- build:js scripts/modules.js -->
@@ -46,6 +48,8 @@
         <script src="scripts/controllers/lightController.js"></script>
         <script src="scripts/controllers/mobileController.js"></script>
         <script src="scripts/directive/lamp.js"></script>
+        <script src="scripts/directive/colorpicker.js"></script>
+        <script src="libs/slider.js"></script>
         <!-- endbuild -->
 </body>
 </html>

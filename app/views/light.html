@@ -1,11 +1,21 @@
-<div>
-    <label for="red">R</label>
-    <input type="number" id="red" ng-model="color.red"/>
-    <label for="green">G</label>
-    <input type="number" id="green" ng-model="color.green"/>
-    <label for="blue">B</label>
-    <input type="number" id="blue" ng-model="color.blue"/>
-    <div style="height: 100px; width: 100px;" ng-style="changeColor()">&nbsp; </div>
+<!--<div>-->
+    <!--<label for="red">R</label>-->
+    <!--<input type="number" id="red" ng-model="color.red"/>-->
+    <!--<label for="green">G</label>-->
+    <!--<input type="number" id="green" ng-model="color.green"/>-->
+    <!--<label for="blue">B</label>-->
+    <!--<input type="number" id="blue" ng-model="color.blue"/>-->
+    <!--<div style="height: 100px; width: 100px;" ng-style="changeColor()">&nbsp; </div>-->
+<!--</div>-->
+
+<div class="slider">
+    <div id="red" ui-slider="colorpicker.options" ng-model="colorpicker.red"></div>
+    Red: <input ng-model="colorpicker.red">
+    <div id="green" ui-slider="colorpicker.options" ng-model="colorpicker.green"></div>
+    Green: <input ng-model="colorpicker.green">
+    <div id="blue" ui-slider="colorpicker.options" ng-model="colorpicker.blue"></div>
+    Blue: <input ng-model="colorpicker.blue">
+    <div id="swatch" class="hidden-sm hidden-xs"></div>
 </div>
 
 <div class="lampLight hidden-xs hidden-sm" lamp></div>
