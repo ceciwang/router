@@ -14,6 +14,10 @@ angular.module('routeApp', [
             templateUrl: 'views/light.html',
             controller: 'LightController'
         })
+        .when('/mobile', {
+            templateUrl: 'views/mobile.html',
+            controller: 'MobileController'
+        })
       .otherwise({
         redirectTo: '/'
       });
