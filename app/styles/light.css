@@ -1,0 +1,123 @@
+.lampLight {
+    background-color: #111;
+}
+.external{
+    position: absolute;
+    background: white;
+    padding: 1em;
+    z-index: 11;
+}
+
+.wide{
+    top:0;
+    left:0;
+    display: none;
+
+}
+.lenotta{
+    right:0;
+    top: 0;
+    display: none;
+
+}
+.hack{
+    left:0;
+    bottom: 0;
+    display: none;
+}
+.lights{
+    right:0;
+    bottom: 0;
+}
+.central{
+    position: absolute;
+    top: 420px;
+    margin: auto;
+    width: 570px;
+    margin-left: -285px;
+    left: 50%;
+    z-index: 11;
+    color:#000;
+    text-align: justify;
+}
+.central2{
+
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: skew(0deg,0deg) scaleY(.2);
+    -moz-transform: skew(0deg,0deg) scaleY(.2);
+    -ms-transform: skew(0deg,0deg) scaleY(.2);
+    -o-transform: skew(0deg,0deg) scaleY(.2);
+    color: transparent;
+    text-shadow: 0px 0px 40px #222;
+    display: none;
+    top:480px;
+}
+h1.subtitle{
+    font-size: 1.2em;
+
+}
+h1:after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.dustFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.dust{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 300%;
+    margin: 0;
+    z-index: 6;
+    -webkit-transform: translate3d(0, 0, 0);
+
+}
+.dustCloserAnimated{
+    -webkit-animation: dustcloser 120s linear infinite;
+    -moz-animation:    dustcloser 120s linear infinite;
+}
+
+.dustCloser{
+    z-index: 7;
+    background: url('images/dustbig.png');
+}
+
+.dustFarAnimated{
+    -webkit-animation: dustfar 150s linear infinite;
+    -moz-animation:    dustfar 150s linear infinite;
+}
+.dustFar{
+    z-index: 6;
+    background: url('images/dustsmall.png');
+
+}
+
+@-webkit-keyframes dustcloser {
+    0%    {  -webkit-transform: translateY(0); }
+    100%  { -webkit-transform: translateY(-100%); }
+}
+
+@-moz-keyframes dustcloser {
+    0%    { -webkit-transform: translateY(0); }
+    100%  { -webkit-transform: translateY(-100%);}
+}
+
+
+@-webkit-keyframes dustfar {
+    0%    { -webkit-transform: translateY(0); }
+    100%  { -webkit-transform: translateY(-100%);}
+}
+@-moz-keyframes dustfar {
+    0%    { -webkit-transform: translateY(0); }
+    100%  { -webkit-transform: translateY(-100%);}
+}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
