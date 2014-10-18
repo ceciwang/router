@@ -8,14 +8,13 @@
 </div>
 
 <div class="jumbotron">
-    <h1>智能家居接入系统</h1>
+    <h1>智能家居控制中心</h1>
 
-    <p class="lead">
-        <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-    </p>
+    <!--<p class="lead">-->
+        <!--<img src="images/router.jpg" alt="router"/>-->
+    <!--</p>-->
 
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+    <!--<p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>-->
 </div>
 
 <div class="text-center">
@@ -23,18 +22,18 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4 text-center">
+    <div class="col-md-3 text-center">
         <div class="sound"></div>
     </div>
-    <div class="col-md-4" ng-repeat="light in lights">
-        <div class="checkbox">
+    <div class="col-md-2" style="margin-top: 50px; margin-left: 50px;">
+        <div class="checkbox" ng-repeat="light in lights">
             <label>
                 <input type="checkbox" ng-model="light.selected">
                 {{light.name}}
             </label>
         </div>
     </div>
-    <div class="col-md-4 text-center">
+    <div class="col-md-3 text-center">
         <div class="light" ng-class="{lightOn: lightOn}"></div>
         <div class="text-center" ng-switch on="lightOn" ng-click="switchLights()">
             <img ng-switch-when="true" src="images/off.jpg" alt=""/>
@@ -42,7 +41,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 text-center">
+    <div class="col-md-3 text-center">
         <div class="temp"></div>
     </div>
 </div>

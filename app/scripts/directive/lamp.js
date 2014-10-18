@@ -3,6 +3,9 @@
 angular.module('routeApp').directive("lamp", function(){
     return {
         restrict: "A",
+        scope: {
+            colorpicker : "=lamp"
+        },
         template: '	<div class = "external lights">Toggle Lights!</div>'+
             '<div class="dustFrame"> '+
             '<div class = "dustCloser dust"></div>'+
@@ -11,6 +14,7 @@ angular.module('routeApp').directive("lamp", function(){
             '<canvas id="Light"></canvas><canvas id="RopeDrawingArea">You need a internet browser that support html5 canvas…</canvas>"',
 
         link: function(scope, element){
+            console.log(scope.colorpicker)
             var ropeDemo = {
                 data: {
                     fps: +60,
@@ -247,7 +251,27 @@ angular.module('routeApp').directive("lamp", function(){
 
                 grd.addColorStop(0, 'white');
                 // dark blue
-                grd.addColorStop(1, 'rgba(255, 255, 255, 0.6)');
+
+//                scope.colorpicker
+                scope.$watch('colorpicker', function(oldval, newval){
+                    ropeDemo.context.drawingContext.moveTo(item.x, item.y+170);
+                    ropeDemo.context.drawingContext.lineTo(3900, 1280);
+                    ropeDemo.context.drawingContext.lineTo(-3900,1280);
+                    ropeDemo.context.drawingContext.lineTo(item.x, item.y+170);
+                    var grd = ropeDemo.context.drawingContext.createRadialGradient(0, 0, 2, 640, 1030, 1280);
+
+                    grd.addColorStop(0, 'white');
+                    // dark blue
+                    var color = 'rgba('+scope.colorpicker.red+', '+ scope.colorpicker.green +', ' + scope.colorpicker.blue+', 0.6)';
+                    console.log(color)
+                    grd.addColorStop(1, 'rgba(0, 255, 255, 0.6)');
+                    ropeDemo.context.drawingContext.fillStyle = grd;
+                    ropeDemo.context.drawingContext.fill();
+
+//                    console.log(newval)
+                }, true);
+//                var color = 'rgba('+scope.colorpicker.red+','+ scope.colorpicker.green +', ' + scope.colorpicker.blue+', 0.6)';
+//                grd.addColorStop(1, 'rgba(0, 255, 255, 0.6)');
 
                 // ropeDemo.context.drawingContext.fillStyle = 'rgba(255, 255, 209, 0.9)';
                 ropeDemo.context.drawingContext.fillStyle = grd;
