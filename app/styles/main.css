@@ -154,3 +154,15 @@ body {
     width: 15%;
     display: inline-block;
 }
+.lampLight {
+    opacity: 0.9;
+}
+
+.slider {
+    position: absolute;
+    right: 0;
+    /*opacity: 1;*/
+    z-index: 999;
+    width: 500px;
+
+}
