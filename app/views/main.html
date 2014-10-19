@@ -1,56 +1,57 @@
-<div class="header">
-    <ul class="nav nav-pills pull-right">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-    </ul>
-    <h3 class="text-muted">route</h3>
-</div>
+<div class="first container">
 
-<div class="jumbotron">
-    <h1>智能家居控制中心</h1>
-
-    <!--<p class="lead">-->
-        <!--<img src="images/router.jpg" alt="router"/>-->
-    <!--</p>-->
-
-    <!--<p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>-->
-</div>
-
-<div class="text-center">
-    <img src="images/router.jpg" alt="router"/>
-</div>
-
-<div class="row">
-    <div class="col-md-3 text-center">
-        <div class="sound"></div>
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a ng-href="#">Home</a></li>
+            <li><a ng-href="#">About</a></li>
+            <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">route</h3>
     </div>
-    <div class="col-md-2" style="margin-top: 50px; margin-left: 50px;">
-        <div class="checkbox" ng-repeat="light in lights">
-            <label>
-                <input type="checkbox" ng-model="light.selected">
-                {{light.name}}
-            </label>
+
+    <div class="jumbotron">
+        <h1>智能家居控制中心</h1>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="text-center">
+        <img src="images/router.jpg" alt="router"/>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <div class="sound"></div>
         </div>
-    </div>
-    <div class="col-md-3 text-center">
-        <a ng-href="#/fancyLight">
-            <div class="light" ng-class="{lightOn: lightOn}">
+        <div class="col-md-2" style="margin-top: 50px; margin-left: 50px;">
+            <div class="checkbox" ng-repeat="light in lights">
+                <label>
+                    <input type="checkbox" ng-model="light.selected">
+                    {{light.name}}
+                </label>
             </div>
-        </a>
-        <!--<div class="light" ng-class="{lightOn: lightOn}">-->
-        <!--</div>-->
-        <div class="text-center" ng-switch on="lightOn" ng-click="switchLights()">
-            <img ng-switch-when="true" src="images/off.jpg" alt=""/>
-            <img ng-switch-default="" src="images/on.jpg" alt=""/>
+        </div>
+        <div class="col-md-3 text-center">
+            <a ng-href="#/fancyLight">
+                <div class="light" ng-class="{lightOn: lightOn}">
+                </div>
+            </a>
+            <!--<div class="light" ng-class="{lightOn: lightOn}">-->
+            <!--</div>-->
+            <div class="text-center" ng-switch on="lightOn" ng-click="switchLights()">
+                <img ng-switch-when="true" src="images/off.jpg" alt=""/>
+                <img ng-switch-default="" src="images/on.jpg" alt=""/>
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+            <div class="temp"></div>
         </div>
     </div>
 
-    <div class="col-md-3 text-center">
-        <div class="temp"></div>
+    <div class="footer">
+        <p>♥ from the Franken Zeng.</p>
     </div>
-</div>
-
-<div class="footer">
-    <p>♥ from the Franken Zeng.</p>
 </div>

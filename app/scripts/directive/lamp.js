@@ -15,6 +15,12 @@ angular.module('routeApp').directive("lamp", function(){
 
         link: function(scope, element){
             console.log(scope.colorpicker)
+            scope.$watch('colorpicker', function(){
+                console.log("~~~")
+                console.log(scope.colorpicker.red)
+                ropeDemo.Light();
+            });
+
             var ropeDemo = {
                 data: {
                     fps: +60,
@@ -225,14 +231,13 @@ angular.module('routeApp').directive("lamp", function(){
                 setTimeout(function(){ropeDemo.Light()}, 1100);
                 $('.dustCloser').css({'opacity':'1'}).addClass('dustCloserAnimated');
                 $('.dustFar').css({'opacity':'1'}).addClass('dustFarAnimated');
-
             };
+
+
             ropeDemo.Light = function(){
                 $('.central').css({'opacity':'1'});
                 ropeDemo.data.state = true;
                 ropeDemo.context.drawingContext.beginPath();
-
-
 
                 var item = ropeDemo.rope.items.slice(-1)[0];
                 var item0 = ropeDemo.rope.items.slice(-9)[0];
@@ -271,14 +276,14 @@ angular.module('routeApp').directive("lamp", function(){
 ////                    console.log(newval)
 //                }, true);
                 var color = 'rgba('+scope.colorpicker.red+','+ scope.colorpicker.green +', ' + scope.colorpicker.blue+', 0.6)';
-                grd.addColorStop(1, 'rgba(0, 255, 255, 0.6)');
+                grd.addColorStop(1, color);
 
 //                ropeDemo.context.drawingContext.fillStyle = 'rgba(255, 255, 209, 0.9)';
                 ropeDemo.context.drawingContext.fillStyle = grd;
                 ropeDemo.context.drawingContext.fill();
 
                 ropeDemo.context.drawingContext.drawImage(ropeDemo.context.img1,-150,-10);
-
+//
 
                 ropeDemo.context.drawingContext.restore();
                 ropeDemo.context.drawingContext.lineWidth = 0;
