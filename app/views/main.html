@@ -34,7 +34,12 @@
         </div>
     </div>
     <div class="col-md-3 text-center">
-        <div class="light" ng-class="{lightOn: lightOn}"></div>
+        <a ng-href="#/fancyLight">
+            <div class="light" ng-class="{lightOn: lightOn}">
+            </div>
+        </a>
+        <!--<div class="light" ng-class="{lightOn: lightOn}">-->
+        <!--</div>-->
         <div class="text-center" ng-switch on="lightOn" ng-click="switchLights()">
             <img ng-switch-when="true" src="images/off.jpg" alt=""/>
             <img ng-switch-default="" src="images/on.jpg" alt=""/>
